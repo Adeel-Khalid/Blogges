@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar with Hover Dropdown</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- font awsome link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- swiper link  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- swiper link  end -->
+  <style>
+    /* Custom Dropdown Styling */
+    .custom-dropdown {
+      position: relative;
+    }
+
+    .recent {
+      font-family: "Merriweather", serif;
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    .button-link:hover {
+      color: black;
+    }
+
+    .button-link {
+      font-family: "Merriweather", serif;
+      font-weight: bold;
+      font-style: normal;
+      color: beige;
+    }
+
+    .custom-dropdown .dropdown-menu {
+      display: none;
+      /* Hide by default */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      max-height: 300px;
+      /* Optional: Set a max height */
+      overflow-y: auto;
+    }
+
+    .custom-dropdown:hover .dropdown-menu {
+      display: block;
+      /* Show on hover */
+    }
+
+    .dropdown-menu {
+      background-color: rgb(252, 120, 72);
+      border: none;
+    }
+
+    .dropdown-menu .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .dropdown-menu .col {
+      flex: 1 0 12.5%;
+      /* 8 columns (12.5% of 100%) */
+      padding: 5px;
+    }
+
+    .dropdown-menu a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .blog-card {
+      text-decoration: none;
+      color: black;
+    }
+
+    .r-blogs img {
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="" style="background-color: rgb(44, 44, 44);">
+    <h4 class="text-white text-center">Every type off blogges on this Website</h4>
+  </nav>
+  <nav class="navbar navbar-expand-lg" style="background-color: rgb(252, 120, 72); cursor: pointer;">
+    <div class="container">
+      <h1 class="navbar-brand text-dark" href="#" style="font-size: 1.88rem; font-weight: bold;">Read Blogges</h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end button-link" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item ms-3 me-3">
+            <a class="nav-link active  button-link" aria-current="page" href="Index.html">Home</a>
+          </li>
+          <li class="nav-item ms-3 me-3">
+            <a class="nav-link button-link" href="About.html">About</a>
+          </li>
+          <!-- Custom Dropdown -->
+          <li class="nav-item ms-3 me-3 custom-dropdown">
+            <a class="nav-link button-link" href="Blogges.html">Blogges</a>
+            <div class="dropdown-menu bg-dark">
+              <a href="Index.html">
+                <option value="1" class="text-white">Treading</option>
+              </a>
+              <a href="Index.html">
+                <option value="1" class="text-white">Youtube</option>
+              </a>
+              <a href="Index.html">
+                <option value="1" class="text-white">Tiktok</option>
+              </a>
+              <a href="Index.html">
+                <option value="1" class="text-white">Treading</option>
+              </a>
+              <a href="">
+                <option value="1" class="text-white">News</option>
+              </a>
+              <a href="">
+                <option value="1" class="text-white">Games</option>
+              </a>
+              <a href="">
+                <option value="1" class="text-white">Technology</option>
+              </a>
+              <a href="">
+                <option value="1" class="text-white">Health & Fitness</option>
+              </a>
+              <a href="">
+                <option value="1" class="text-white">Lifestyle</option>
+              </a>
+              <a href="">
+                <option value="1" class="text-white">Education</option>
+              </a>
+              <a href="">
+                <option value="1" class="text-white">Entertainment</option>
+              </a>
+              <a href="">
+                <option value="1" class="text-white">Food & Cooking</option>
+              </a>
+
+
+            </div>
+          </li>
+          <li class="nav-item ms-3 me-3">
+            <a class="nav-link  button-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="Container-fluid mt-5">
+    <h2 class="text-center text-center text-dark" style="font-weight: 900;">Recent </h2>
+    <div class="row mt-5">
+      <div class="col-lg-1"></div>
+      <a href="index-1blog-page.html" class="col-lg-3 mt-5 blog-card">
+        <div class="card  ">
+          <img src="img/1blog.jpg" class="img-fluid" alt="...">
+          <div class="card-content">
+            <h3 class="card-title mt-3">You Are Under Construction</h3>
+            <p class="card-text  mt-3" style="font-weight: 900; color:rgb(252, 120, 72); font-size: 1.33rem;">Read
+              Blogges For Free</p>
+          </div>
+        </div>
+      </a>
+      <a href="2blog-index.html" class="col-lg-4 blog-card">
+        <div class="card ">
+          <img src="img/2blog.jpg" alt="Card Image">
+          <div class="card-content">
+            <h3 class="card-title mt-3">Set Apart for a Purpose</h3>
+            <p class="card-text  mt-3" style="font-weight: 900; color:rgb(252, 120, 72); font-size: 1.33rem;">Read
+              Blogges For Free</p>
+          </div>
+        </div>
+      </a>
+      <a href="3blog-index.html" class="col-lg-3 mt-5 blog-card">
+        <div class="card ">
+          <img src="img/3blog.jpg" alt="Card Image">
+          <div class="card-content">
+            <h3 class="card-title mt-3">Finding Purpose in Your Pain</h3>
+            <p class="card-text  mt-3" style="font-weight: 900; color:rgb(252, 120, 72); font-size: 1.33rem;">Read
+              Blogges For Free</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <div class="container mt-5"
+    style="height: 30vh; border-radius: 60px; display: flex; align-items: center; justify-content: center; background-image: url(img/pexels-freestockpro-1227513.jpg); background-size: cover;">
+    <h2 class="text-center text-dark" style="font-weight: 900;">Read Blogges For Free</h2>
+  </div>
+
+  <!-- about text start  -->
+  <main style="line-height: 25px;">
+    <div class="container mt-5">
+      <div class="text-box bg-dark text-white rounded" style="line-height: 30px;">
+        <h1 class="mt-5">Welcome to Our Blog!</h1>
+        <h6>Welcome to go-to destination for insightful articles, inspiring stories, expert advice, and a variety of
+          content that fuels curiosity and creativity. Whether you're looking for the latest trends, practical tips, or
+          just some inspiration for your next big project, we’ve got something for everyone.</h6>
+        <p>Our mission is to provide a space where knowledge and creativity come together to offer fresh perspectives on
+          the topics you care about. Our team of writers and contributors are passionate about what they do, and we are
+          thrilled to share that energy with you through each post. We believe that in today’s fast-paced world, it’s
+          important to have access to content that not only informs but also entertains. So, whether you're here for
+          personal growth, professional tips, or just to unwind with a great read, we hope you find something that
+          resonates with you.</p>
+      </div>
+    </div>
+    <div class="second-box mt-5">
+      <h2 class="text-center" style="font-weight: bold;color:rgb(252, 120, 72);">Our Mission</h2>
+      <p style="font-weight: bold;">We aim to connect with our audience through thought-provoking articles, practical
+        guides, and relatable stories that speak to the human experience. We believe that great content should be both
+        meaningful and accessible, which is why we make sure every article is written with clarity and heart.
+
+        Whether you're here for expert tips on improving your career, exploring creative hobbies, or simply seeking
+        motivation to live your best life, we hope our blog serves as a valuable resource for your journey.
+      </p>
+    </div>
+    <div class="third-box mt-5">
+      <h1 class="text-center" style="font-weight: bold;color:rgb(252, 120, 72);">Meet Our Team</h1>
+      <p style="font-weight: bold;">Behind every post on [Your Blog Name] is a dedicated team of writers, editors, and
+        creators who are passionate about sharing knowledge. Each member brings a unique perspective to the table, which
+        allows us to offer a variety of content that covers a broad spectrum of interests.
+
+        Our writers come from diverse backgrounds, and we pride ourselves on having a team that reflects a wide range of
+        experiences, expertise, and passions. From industry professionals to hobbyists and thought leaders, we bring
+        together people who truly care about the topics they write about.
+
+        We work together to ensure that every article we publish meets our high standards of quality, accuracy, and
+        relevance. Whether it’s a deep dive into a trending topic or a practical guide to everyday life, you can count
+        on our team to provide the best possible content.</p>
+
+    </div>
+    <!-- about pic  -->
+    <div class="container mt-5">
+      <img class="rounded img-fluid" src="img/aboutpic.jpeg" alt="">
+    </div>
+    <!-- about pic  -->
+    <div class="forth-box mt-5">
+      <h1 class="text-center" style="font-weight: bold;color:rgb(252, 120, 72);">Join Our Community</h1>
+      <p style="font-weight: bold;">We are more than just a blog – we’re a community of curious minds who love to learn
+        and grow. We invite you to join us on this journey by subscribing to our newsletter, following us on social
+        media, or simply sharing your thoughts in the comments section of our posts.
+
+        We value the input and feedback of our readers, as it helps us shape the direction of our content and build a
+        more connected community. Whether you’re here to read or contribute, we believe that every voice matters, and we
+        are excited to have you as part of our family.
+
+        Thank you for being a part of [Your Blog Name]. We look forward to connecting with you and bringing you even
+        more exciting and enriching content in the future.</p>
+    </div>
+  </main>
+
+  <!-- about text end  -->
+
+  <footer class=" bg-dark mt-5" style="border-top-left-radius: 30px; border-top-right-radius: 30px;">
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-lg-6 mt-5 ">
+          <h6 style="font-weight: bold; color: rgb(255, 255, 255);">©Read Blogges For Free</h6>
+          <h6 style="font-weight: bold; color: rgb(255, 255, 255); width: 300px;">10635 Scripps Ranch Blvd. Suite H San
+            Diego, CA
+            92131 | (858) 576-0007
+            A CATALYST built website</h6>
+        </div>
+        <div class="col-lg-3 mt-5 text-white ">
+          <div class="d-flex justify-content-around">
+            <h3><i class="fa-brands fa-tiktok text-white"></i></h3>
+            <h3><i class="fa-brands fa-instagram"></i></h3>
+            <h3><i class="fa-brands fa-telegram"></i></h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Import Bootstrap and Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+  </script>
+
+</body>
+
+</html>

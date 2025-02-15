@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <!-- font awsome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- swiper link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- swiper link  end -->
+
+    <style>
+        /* Custom Dropdown Styling */
+        .custom-dropdown {
+            position: relative;
+        }
+
+        .recent {
+            font-family: "Merriweather", serif;
+            font-weight: bolder;
+            font-style: normal;
+        }
+
+        .heading {
+            font-family: "Merriweather", serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .button-link:hover {
+            color: black;
+        }
+
+        .button-link {
+            font-family: "Merriweather", serif;
+            font-weight: bold;
+            font-style: normal;
+            color: beige;
+        }
+
+        .custom-dropdown .dropdown-menu {
+            display: none;
+            /* Hide by default */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            max-height: 300px;
+            /* Optional: Set a max height */
+            overflow-y: auto;
+        }
+
+        .custom-dropdown:hover .dropdown-menu {
+            display: block;
+            /* Show on hover */
+        }
+
+        .dropdown-menu {
+            background-color: rgb(252, 120, 72);
+            border: none;
+        }
+
+        .dropdown-menu .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .dropdown-menu .col {
+            flex: 1 0 12.5%;
+            /* 8 columns (12.5% of 100%) */
+            padding: 5px;
+        }
+
+        .dropdown-menu a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .blog-card {
+            text-decoration: none;
+            color: black;
+        }
+
+        .r-blogs img {
+            height: 200px;
+        }
+        .delete-btn{
+            background-color: red;
+            border: none;
+            width: 70px;
+            height: 30px;
+            border-radius: 6px;
+        } 
+    </style>
+</head>
+
+<body>
+    <nav class="" style="background-color: rgb(44, 44, 44);">
+        <h4 class="text-white text-center">Every type off blogges on this Website</h4>
+    </nav>
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(252, 120, 72); cursor: pointer;">
+        <div class="container">
+            <h1 class="navbar-brand text-dark" href="#" style="font-size: 1.88rem; font-weight: bold;">Read Blogges</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end button-link" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item ms-3 me-3">
+                        <a class="nav-link active  button-link" aria-current="page" href="Index.html">Home</a>
+                    </li>
+                    <li class="nav-item ms-3 me-3">
+                        <a class="nav-link button-link" href="#">About</a>
+                    </li>
+                    <!-- Custom Dropdown -->
+                    <li class="nav-item ms-3 me-3 custom-dropdown">
+                        <a class="nav-link button-link" href="#">Blogges</a>
+                        <div class="dropdown-menu bg-dark">
+                            <a href="Index.html">
+                                <option value="1" class="text-white">Treading</option>
+                            </a>
+                            <a href="">
+                                <option value="1" class="text-white">News</option>
+                            </a>
+                            <a href="">
+                                <option value="1" class="text-white">Games</option>
+                            </a>
+                            <a href="">
+                                <option value="1" class="text-white">Technology</option>
+                            </a>
+                            <a href="Index.html">
+                                <option value="1" class="text-white">Youtube</option>
+                              </a>
+                              <a href="Index.html">
+                                <option value="1" class="text-white">Tiktok</option>
+                              </a>
+                              <a href="Index.html">
+                                <option value="1" class="text-white">Treading</option>
+                              </a>
+                            <a href="">
+                                <option value="1" class="text-white">Health & Fitness</option>
+                            </a>
+                            <a href="">
+                                <option value="1" class="text-white">Lifestyle</option>
+                            </a>
+                            <a href="">
+                                <option value="1" class="text-white">Education</option>
+                            </a>
+                            <a href="">
+                                <option value="1" class="text-white">Entertainment</option>
+                            </a>
+                            <a href="">
+                                <option value="1" class="text-white">Food & Cooking</option>
+                            </a>
+
+
+                        </div>
+                    </li>
+                    <li class="nav-item ms-3 me-3">
+                        <a class="nav-link  button-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container mt-5">
+            <h3 style="font-weight: bold;">You Are Not Just Talented, You Are Spiritually Gifted</h3>
+            <div class="container bg-dark" style="border-radius: 30px;">
+                <h1 class="text-white heading mt-5">“I want to make a difference in the world.”</h1>
+                <h3 class="text-white heading mt-5">And I am not that special for saying that.</h3>
+                <p class="text-white mt-4" style="line-height: 30px;">Now about the gifts of the Spirit, brothers and sisters, I do not want you to be uninformed… 4 There are different kinds of gifts, but the same Spirit distributes them. 5 There are different kinds of service, but the same Lord. 6 There are different kinds of working, but in all of them and in everyone it is the same God at work.
+
+                    7 Now to each one the manifestation of the Spirit is given for the common good. 8 To one there is given through the Spirit a message of wisdom, to another a message of knowledge by means of the same Spirit, 9 to another faith by the same Spirit, to another gifts of healing by that one Spirit, 10 to another miraculous powers, to another prophecy, to another distinguishing between spirits, to another speaking in different kinds of tongues, r and to still another the interpretation of tongues. 11 All these are the work of one and the same Spirit, and he distributes them to each one, just as he determines. (1 Corinthians 12:1, 4-11, NIV)</p>
+            </div>
+            <h4 style="font-weight: 700;" class="mt-5">We are united in purpose and unique in calling.</h4>
+            <p style="line-height: 30px;">There is unity in our singular purpose to glorify God and enjoy him forever (shoutout to the credible Westminster Catechism). We are teammates, working together to enact God’s plan of redemption in the world. Yet, we are unique in our calling. Our calling is the unique way in which God has wired us, equipped us, and assigned us to contribute to and advance his kingdom. This is not limited to our spiritual gifts, but it certainly includes them! And even in 1 Corinthians 12, Paul is not exhausting all the spiritual gifts, but using a few as an example to serve his point about how the body of Christ (you, me, we) works together.
+            </p>
+            <div class="row mt-5">
+               <img src="img/11blog.jpg"class="col-lg-6" alt="" style="border-radius: 40px;">
+                <div class="col-lg-6">
+                    <h4 class="heading" style="font-weight: bold;">
+                        We need to know our Holy Spirit-given gifts if we want to walk in our full purpose and potential.</h4>
+                    <p style="line-height: 30px;">First, take our spiritual gifts test by clicking HERE. It is not infallible, but it is a good tool to help you consider how God’s empowering presence (Holy Spirit) wants to work in and through you.
+                        Second, talk to some other Christians who you respect and who know you well. Ask them what spiritual gifts they see in you. Do not underestimate how someone else can see in you what you might not see in yourself!
+                        Third, study biblical passages on these things. You may have noticed we did not unpack the spiritual gifts in this blog post. It would take quite some time to do so! Plus, let’s give you some homework and ownership here. Pick up some commentaries on 1 Corinthians and read how scholars shed light on what Paul is saying about spiritual gifts (especially 1 Corinthians 12-14). The Zondervan Exegetical Commentary on 1 Corinthians is phenomenal, though at times it can be geared toward an academic audience. If you need a more lay-level commentary try the NIV Application Commentary on 1 Corinthians or 1 Corinthians For You.
+                        Fourth, but not least, put your spiritual gifts into practice!</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+        <!-- Coment box start  -->
+        <main class="container mt-5" style="background-color: rgb(252, 120, 72); border-radius: 20px;">
+            <div class="head">
+                <h1>Post a Comment</h1>
+            </div>
+            <div><span id="Comment">0 </span> Comments</div>
+            <div class="text">
+                <p>We are happy to hear from you</p>
+            </div>
+            <div class="comments"></div>
+            <div class="commentbox">
+                <div class="user-icon d-flex">
+                    <img src="img/user.png" width="40px" alt="">
+                    <h4 class="mt-3">Comment Us</h4>
+                </div>
+                <div class="contant">
+                    <input type="text" name="" value="Anonymous" class="user" id="" style="border: none; background-color: transparent; margin-left: 60px;">
+                    <div class="commentinput">
+                        <input type="text" placeholder="Enter comment" class="usercomment" name="" id="" style="width: 80%; border: none; background-color: transparent; color: black; font-weight: bold; border-bottom: 3px solid white;">
+                        <div class="button mt-2">
+                            <button class="btn btn-info" id="Publish">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                "use strict";
+                
+                const userid = {
+                    name: null,
+                    identify: null,
+                    image: null,
+                    message: null,
+                    date: null,
+                }
+        
+                const usercomment = document.querySelector(".usercomment");
+                const Publishbtn = document.querySelector("#Publish");
+                const comment = document.querySelector(".comments");
+                const userName = document.querySelector(".user");
+                let comments = JSON.parse(localStorage.getItem('comments')) || [];
+        
+                function loadComments() {
+                    comments.forEach(function(commentData, index) {
+                        let Published = `
+                        <div class="parents" data-index="${index}">
+                            <img src="${commentData.image}">
+                            <div>
+                                <h1>${commentData.name}</h1>
+                                <p>${commentData.message}</p>
+                                <div class="engagements"><img src="like.png"><img src="share.png"></div>
+                                <span class="date">${commentData.date}</span>
+                                <button class="delete-btn btn btn-danger">Delete</button>
+                            </div>    
+                        </div>
+                        `;
+                        comment.innerHTML += Published;
+                    });
+                }
+        
+                usercomment.addEventListener("input", e => {
+                    if(!usercomment.value){
+                        Publishbtn.setAttribute("disabled","disabled");
+                        Publishbtn.classList.remove("abled");
+                    } else {
+                        Publishbtn.removeAttribute("disabled");
+                        Publishbtn.classList.add("abled");
+                    }
+                });
+        
+                function addpost(){
+                    console.log("The button Works");
+                    if(!usercomment.value) return;
+                    userid.name = userName.value;
+                    if(userid.name === "Anonymous"){
+                        userid.identify = false;
+                        userid.image = "anonymous.png";
+                    } else {
+                        userid.identify = true;
+                        userid.image = "user.png";
+                    }
+        
+                    userid.message = usercomment.value;
+                    userid.date = new Date().toLocaleString("en-GB", { timeZone: "Asia/Karachi" });
+                    let Published = `
+                    <div class="parents" data-index="${comments.length}">
+                        <img src="${userid.image}">
+                        <div>
+                            <h1>${userid.name}</h1>
+                            <p>${userid.message}</p>
+                            <div class="engagements"><img src="like.png"><img src="share.png"></div>
+                            <span class="date">${userid.date}</span>
+                            <button class="delete-btn">Delete</button>
+                        </div>    
+                    </div>
+                    `;
+                    comment.innerHTML += Published;
+        
+                    comments.push(userid);
+                    localStorage.setItem('comments', JSON.stringify(comments));
+        
+                    usercomment.value = "";
+                }
+        
+                function deleteComment(event) {
+                    if (event.target.classList.contains('delete-btn')) {
+                        const parentDiv = event.target.closest('.parents');
+                        const index = parentDiv.dataset.index;
+                        const confirmation = confirm("Can you delete this comment?");
+                        if (confirmation) {
+                            comments.splice(index, 1);
+                            localStorage.setItem('comments', JSON.stringify(comments));
+                            parentDiv.remove();
+                            updateDataIndex();
+                        }
+                    }
+                }
+        
+                function updateDataIndex() {
+                    const commentElements = document.querySelectorAll('.parents');
+                    commentElements.forEach((element, index) => {
+                        element.dataset.index = index;
+                    });
+                }
+        
+                window.onload = loadComments;
+                Publishbtn.addEventListener("click", addpost);
+                comment.addEventListener("click", deleteComment);
+            </script>
+        </main>
+        <!-- Coment box start  -->
+    
+
+    <footer class=" bg-dark mt-5" style="border-top-left-radius: 30px; border-top-right-radius: 30px;">
+        <div class="container-fluid mt-5">
+          <div class="row">
+            <div class="col-lg-6 mt-5 ">
+              <h6 style="font-weight: bold; color: rgb(255, 255, 255);">©Read Blogges For Free</h6>
+              <h6 style="font-weight: bold; color: rgb(255, 255, 255); width: 300px;">10635 Scripps Ranch Blvd. Suite H San Diego, CA
+                92131 | (858) 576-0007
+                A CATALYST built website</h6>
+            </div>
+            <div class="col-lg-3 mt-5 text-white ">
+              <div class="d-flex justify-content-around">
+                <h3><i class="fa-brands fa-tiktok text-white" ></i></h3>
+                <h3><i class="fa-brands fa-instagram"></i></h3>
+                <h3><i class="fa-brands fa-telegram"></i></h3>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+    </footer>
+</body>
+
+</html>
